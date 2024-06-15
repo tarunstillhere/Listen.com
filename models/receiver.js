@@ -11,10 +11,6 @@ const receiverSchema = new Schema({
     required: true,
     unique: true,
   },
-  password: {
-    type: String,
-    required: true,
-  },
   phoneNumber: {
     type: String,
     required: true,
@@ -50,6 +46,8 @@ const receiverSchema = new Schema({
     default: "offline",
   },
 });
+
+
 
 const Receiver = mongoose.model("Receiver", receiverSchema);
 

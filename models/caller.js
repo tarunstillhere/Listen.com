@@ -1,9 +1,10 @@
+const { object, string, required } = require("joi");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
+const passportLocalMongoose = require("passport-local-mongoose");
 
 const callerSchema = new Schema({
-    name: {
+    username: {
     type: String,
     required: true,
   },
@@ -11,10 +12,6 @@ const callerSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-  },
-  password: {
-    type: String,
-    required: true,
   },
   phoneNumber: {
     type: String,
@@ -52,6 +49,8 @@ const callerSchema = new Schema({
   },
 }); 
 
+
+callerSchema.plugin(passportLocalMongoose);
 
 const Caller = mongoose.model("Caller", callerSchema);
 

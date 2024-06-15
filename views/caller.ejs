@@ -9,38 +9,38 @@
     <h1>Create New Caller</h1>
     <form action="/submitCall" method="POST">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
+        <input type="text" id="name" name="caller[username]" required><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
+        <input type="email" id="email" name="caller[email]" required><br>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
+        <input type="password" id="password" name="caller[password]" required><br>
 
         <label for="phoneNumber">Phone Number:</label>
-        <input type="text" id="phoneNumber" name="phoneNumber" required><br>
+        <input type="text" id="phoneNumber" name="caller[phoneNumber]" required><br>
 
         <label for="gender">Gender:</label>
-        <select id="gender" name="gender">
+        <select id="gender" name="caller[gender]">
           <option value="Male">Male</option>
           <option value="Female">Female</option>
           <option value="Other">Other</option>
         </select><br>
 
         <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required><br>
+        <input type="date" id="dob" name="caller[dob]" required><br>
 
         <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required><br>
+        <input type="text" id="address" name="caller[address]" required><br>
 
         <label for="imgURL">Image URL:</label>
-        <input type="text" id="imgURL" name="imgURL" required><br>
+        <input type="text" id="imgURL" name="caller[imgURL]" required><br>
 
         <label for="language">Language:</label>
-        <input type="text" id="language" name="language"><br>
+        <input type="text" id="language" name="caller[language]"><br>
 
         <label for="status">Status:</label>
-        <select id="status" name="status">
+        <select id="status" name="caller[status]">
             <option value="active">Active</option>
             <option value="inactive">Inactive</option>
             <option value="in-call">In-call</option>
